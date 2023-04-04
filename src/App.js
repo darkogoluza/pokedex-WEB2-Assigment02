@@ -16,9 +16,11 @@ function App() {
                 </div>
             </header>
             <Routes>
-                <Route exact path="/pokedex-WEB2-Assigment02/" element={<Home />} />
-                <Route path="/pokedex-WEB2-Assigment02/about" element={<About />} />
-                <Route path="/pokedex-WEB2-Assigment02/pokemon/:id" element={<SinglePokemon />} />
+                <Route path="/*">
+                    <Route index element={<Home />} />
+                    <Route path="about" element={<About />} />
+                    <Route path="pokemon/:id" element={<SinglePokemon />} />
+                </Route>
             </Routes>
         </div>
     )
